@@ -5,7 +5,7 @@ require 'thor'
 require 'pp'
 
 class ParentVUEScript < Thor
-  class_option :login_url, aliases: '-l', desc: 'Login Page URL', required: true
+  class_option :login_url, aliases: '-l', desc: 'Login Page URL', default: 'https://portal.sfusd.edu/PXP2_Login.aspx'
   class_option :username,  aliases: '-U', desc: 'Username', required: true
   class_option :password,  aliases: '-P', desc: 'Password', required: true
   # TODO: language switch
@@ -13,7 +13,7 @@ class ParentVUEScript < Thor
   desc 'list', 'Print list of students associated with your account.'
 
   def list
-    pp service.list_students
+    pp service.students
   end
 
   private

@@ -1,0 +1,848 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, user-scalable=yes" /><title>
+    ParentVUE
+</title><meta content="en-US" name="language" /><meta content="private - general audiences" name="rating" /><meta content="2005 - Edupoint,Inc" name="copyright" /><meta content="Edupoint, LLC" name="author" /><link rel="Shortcut Icon" href="synergy.ico" />
+
+    <script type="text/javascript">
+        var OEN = { Configurations: {} };
+        window.PXP = window.PXP || { Translations: {} };
+        window.ST = window.ST || {};
+        window.ST.Translations = window.ST.Translations || {};
+        ST.NFAList = ST.NFAGlobalList = '<REV_RETURN/>';
+
+        PXP.AGU = '';
+        PXP.Translations.GBNoData = 'No Data';
+        PXP.Translations.ReportAbsence = 'Report Absence';
+        PXP.Translations.GBRecentHistory = 'Recent History';
+        PXP.Translations.No = 'No';
+        PXP.Translations.Yes = 'Yes';
+        PXP.Translations.FlexCountModalTitle = 'Flex Scheduling';
+        PXP.Translations.FlexCountModalContent = 'You are missing requests for some flex scheduling periods.  Would you like to make them now?';
+        PXP.VerifyFlexCount = true;
+        PXP.UseGoogleAPI = true;
+        ST.SessionLength = 20;
+        PXP.SessionTimeout = 5400;
+        ST.SM_ChildName = 'Aila';
+        ST.ResourceCacheString = '2020-07-25T08%3a04%3a29.0000000';
+        ST.Authorization = {
+            "access_token": "authorized"
+        };
+        PXP.StreamsEnabled = false;
+        PXP.SynergyMailEnabled = false;
+        PXP.IncludeAdditionalStaffWhenEmailingTeachers = false;
+        PXP.Translations.EmailVal = {
+            "EmailSent": "Email Sent"
+        };
+        PXP.AllowAbsenceNote = false;
+        PXP.MONTH_NAMES = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ];
+        PXP.Translations.ReportAbsences = {
+            "ErrUnableToSave": "Unable to Save",
+            "ErrInvalidDate": "Invalid Date",
+            "ErrMissingFields": "Please specify both a date and a reason.",
+            "ErrMissingNote": "Missing required field: Note",
+            "ErrMissingDate": "Please enter a start date.",
+            "ErrMissingReason": "Please enter a reason.",
+            "Error": "Error",
+            "Saved": "Saved Absence Request.",
+            "ReportAbsences": "Report Absences",
+            "Instructions": "Please select the day(s) for which the student will be absent, enter a reason for the absence, then click submit.",
+            "Previous": "Previous",
+            "Next": "Next",
+            "Add": "Add",
+            "SelectAReason": "Select A Reason",
+            "Save": "Save",
+            "Close": "Close",
+            "StartDate": "Start Date",
+            "EndDate": "End Date (optional)",
+            "UploadAbsenseNote": "Add doctor's note or document"
+        };
+        PXP.NavigationData = {
+            "items": [
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_None_gs.png",
+                    "activeClass": "active",
+                    "url": "Home_PXP2.aspx?AGU=0",
+                    "description": "Home",
+                    "notificationIcon": "",
+                    "iconExists": false
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_Messages_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_Messages.aspx?AGU=0",
+                    "description": "Messages",
+                    "notificationIcon": "<span title=\"0 unread message\" class=\"MessageNotificationBox collapse\" id=\"unreadMessagesCount\">0</span>",
+                    "iconExists": true
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_Calendar_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_Calendar.aspx?AGU=0",
+                    "description": "Calendar",
+                    "notificationIcon": "",
+                    "iconExists": true
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_Attendance_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_Attendance.aspx?AGU=0",
+                    "description": "Attendance",
+                    "notificationIcon": "",
+                    "iconExists": true
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_CourseHistory_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_CourseHistory.aspx?AGU=0",
+                    "description": "Course History",
+                    "notificationIcon": "",
+                    "iconExists": true
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_ReportCard_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_ReportCard.aspx?AGU=0",
+                    "description": "Report Card",
+                    "notificationIcon": "",
+                    "iconExists": true
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_SchoolInfo_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_SchoolInformation.aspx?AGU=0",
+                    "description": "School Information",
+                    "notificationIcon": "",
+                    "iconExists": true
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_StudentInfo_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_Student.aspx?AGU=0",
+                    "description": "Student Info",
+                    "notificationIcon": "",
+                    "iconExists": true
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_StateTests_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_StateTests.aspx?AGU=0",
+                    "description": "State Tests",
+                    "notificationIcon": "",
+                    "iconExists": true
+                },
+                {
+                    "moduleIcon": "Images/PXP/ModuleIcons/icon_TestHistory_gs.png",
+                    "activeClass": "",
+                    "url": "PXP2_Documents.aspx?AGU=0",
+                    "description": "Documents",
+                    "notificationIcon": "",
+                    "iconExists": true
+                }
+            ],
+            "students": [
+                {
+                    "agu": "0",
+                    "name": "Aila",
+                    "sisNumber": "20111337",
+                    "school": "Parks (Rosa) ES",
+                    "phone": "415-749-3519",
+                    "photo": "Photos/B2/B2BB15E4-9C06-497D-9899-A996F91A6BEE_Photo.PNG",
+                    "current": true
+                },
+                {
+                    "agu": "1",
+                    "name": "Tesla",
+                    "sisNumber": "20071337",
+                    "school": "Asawa (Ruth) SOTA HS",
+                    "phone": "415-695-5700",
+                    "photo": "Photos/CB/CB8C6E58-FADF-4E40-BAAD-249587F2BB5A_Photo.PNG",
+                    "current": false
+                }
+            ]
+        };
+        PXP.Translations.Navigation = {
+            "CurrentModule": "Current Module"
+        };
+        PXP.UseGoogleAPI = true;
+        PXP.Translations.ReportTryAgain = 'The document is being built.  Please try again in a few moments.';
+        PXP.AccessibilityMode = false;
+        PXP.UsePXP2Interface = true;
+        ST.UserType = 1;
+        ST.Impersonated = false;
+        ST.CurrentWebPortal = 2;
+        ST.SM_CheckUnreadMessagesTimeout = 60000;
+        ST.SM_MaxAttachmentSizeMB = 20;
+        ST.SM_BlockedExtensions = ["ADE","ADP","BAT","CHM","CMD","COM","CPL","EXE","HTA","INS","ISP","JAR","JS","JSE","LIB","LNK","MDE","MSC","MSI","MSP","MST","NSH","PIF","SCR","SCT","SHB","SYS","VB","VBE","VBS","VXD","WSC","WSF","WS"];
+        ST.SM_EnableForwarding = false;
+        ST.SM_StaffRecipientAccess = 0;
+        ST.SM_ParentRecipientAccess = 0;
+        ST.SM_StudentRecipientAccess = 0;
+        ST.SM_ContactListSecurity = 0;
+        ST.SM_UserGroupsTabVisible = true;
+        ST.SM_StudentGroupsTabVisible = true;
+        ST.SM_MassEmailTabVisible = true;
+        ST.SM_ContactListsTabVisible = true;
+        ST.SM_JobTitleColumnVisible = true;
+        ST.SM_TypeColumnVisible = true;
+        ST.SM_ContactLogOption = 0;
+        ST.SM_ShowBCC = true;
+        ST.SM_DefaultFolderType = 0;
+        ST.SM_RevLanguageCodeEnglish = '00';
+        ST.SM_ContactCategoriesEnabled = false;
+        ST.SM_DefaultContactLogCategory = "";
+        ST.Translations.Mail_Actions = 'Actions';
+        ST.Translations.Mail_AddAttachment = 'Add Attachment';
+        ST.Translations.Mail_AddRecipients = 'Add Recipients';
+        ST.Translations.Mail_AddressTo = 'Address To';
+        ST.Translations.Mail_Archive = 'Archive';
+        ST.Translations.Mail_ArchiveAll = 'Trash All';
+        ST.Translations.Mail_AttachmentExtensionBlocked = 'Attachment has a blocked extension.';
+        ST.Translations.Mail_Attachments = 'Attachments';
+        ST.Translations.Mail_AttachmentTooLarge = 'Attachment exceeded the maximum size of @@maxAttachmentSizeMB@@ MB.';
+        ST.Translations.Mail_AttachmentsUploading = 'Attachments Uploading';
+        ST.Translations.Mail_AttachmentsUploadingWaitOrCancel = 'You must either wait for the attachments to finish uploading or cancel them.';
+        ST.Translations.Mail_AutosavedAt = 'Auto-saved at';
+        ST.Translations.Mail_Autosaving = 'Auto-saving';
+        ST.Translations.Mail_Back = 'Back';
+        ST.Translations.Mail_BCC = 'Bcc';
+        ST.Translations.Mail_BlankSubjectAndBodyText = 'You must enter text in the subject or body.';
+        ST.Translations.Mail_BlankSubjectAndBodyTitle = 'Blank subject and body';
+        ST.Translations.Mail_BlankSubjectText = 'Are you sure you want to send this message with a blank subject?';
+        ST.Translations.Mail_BlankSubjectTitle = 'Blank subject';
+        ST.Translations.Mail_Cancel = 'Cancel';
+        ST.Translations.Mail_CC = 'Cc';
+        ST.Translations.Mail_Classes = 'Classes';
+        ST.Translations.Mail_Close = 'Close';
+        ST.Translations.Mail_Compose = 'Compose';
+        ST.Translations.Mail_ContactGroup = 'Contact List';
+        ST.Translations.Mail_ContactGroups = 'Contact Lists';
+        ST.Translations.Mail_Contacts = 'Contacts';
+        ST.Translations.Mail_ContactCategory = 'Contact Category';
+        ST.Translations.Mail_Counselor = 'Counselor';
+        ST.Translations.Mail_Course = 'Course';
+        ST.Translations.Mail_CourseID = 'Course ID';
+        ST.Translations.Mail_Date = 'Date';
+        ST.Translations.Mail_Delete = 'Delete';
+        ST.Translations.Mail_DeleteAll = 'Delete All';
+        ST.Translations.Mail_DeleteAllMessagesText = 'Are you sure you want to delete all messages?';
+        ST.Translations.Mail_DeleteAllMessagesTitle = 'Delete All Messages';
+        ST.Translations.Mail_DeleteContactGroup = 'Delete Contact List';
+        ST.Translations.Mail_DeleteContactGroupText = 'Are you sure you want to delete this Contact List?';
+        ST.Translations.Mail_DeleteFolder = 'Delete Folder';
+        ST.Translations.Mail_DeleteFolderText = 'Are you sure you want to delete @@folder@@?';
+        ST.Translations.Mail_DeleteFolderTitle = 'Delete folder';
+        ST.Translations.Mail_DeleteMessagesText = 'Are you sure you want to delete @@numMessages@@?';
+        ST.Translations.Mail_DeleteMessagesTitle = 'Delete @@messages@@';
+        ST.Translations.Mail_Description = 'Description';
+        ST.Translations.Mail_Discard = 'Discard';
+        ST.Translations.Mail_DiscardMessageText = 'Are you sure you want to discard this message?';
+        ST.Translations.Mail_DiscardMessageTitle = 'Discard message';
+        ST.Translations.Mail_District = 'District';
+        ST.Translations.Mail_Drafts = 'Drafts';
+        ST.Translations.Mail_DragDropInfo = 'You can drag and drop attachments here.';
+        ST.Translations.Mail_Edit = 'Edit';
+        ST.Translations.Mail_Editable = 'Editable';
+        ST.Translations.Mail_EditableByStaff = 'Editable By Staff';
+        ST.Translations.Mail_EditContactGroup = 'Edit Contact List';
+        ST.Translations.Mail_EditFolder = 'Edit Folder';
+        ST.Translations.Mail_EditSignatures = 'Edit Signatures';
+        ST.Translations.Mail_EnableForwarding = 'Forward a copy of Synergy Mail messages to the following email addresses:';
+        ST.Translations.Mail_EnterFolderName = 'Enter Folder Name';
+        ST.Translations.Mail_EnterValidFolderName = 'Please enter a valid folder name.';
+        ST.Translations.Mail_ErrorOccurredText = 'Details';
+        ST.Translations.Mail_ErrorOccurredTitle = 'Error occurred';
+        ST.Translations.Mail_Folders = 'Folders';
+        ST.Translations.Mail_Forward = 'Forward';
+        ST.Translations.Mail_From = 'From';
+        ST.Translations.Mail_Grade = 'Grade';
+        ST.Translations.Mail_Grades = 'Grades';
+        ST.Translations.Mail_Group = 'Group';
+        ST.Translations.Mail_GroupName = 'Group Name';
+        ST.Translations.Mail_Groups = 'Groups';
+        ST.Translations.Mail_HideDeletedMessages = 'Hide deleted messages';
+        ST.Translations.Mail_HideDetails = 'Hide Details';
+        ST.Translations.Mail_HideOriginalText = 'Hide Original Message';
+        ST.Translations.Mail_Inbox = 'Inbox';
+        ST.Translations.Mail_JobTitle = 'Job Title';
+        ST.Translations.Mail_Loading = 'Loading';
+        ST.Translations.Mail_LoadingTranslation = 'Loading Translation';
+        ST.Translations.Mail_MarkAllRead = 'Mark All Read';
+        ST.Translations.Mail_MarkAllUnread = 'Mark All Unread';
+        ST.Translations.Mail_MarkAsRead = 'Mark As Read';
+        ST.Translations.Mail_MarkAsUnread = 'Mark As Unread';
+        ST.Translations.Mail_MassEmail = 'Mass Email';
+        ST.Translations.Mail_Message = 'message';
+        ST.Translations.Mail_MessageContent = 'message';
+        ST.Translations.Mail_Messages = 'Messages';
+        ST.Translations.Mail_MessageTranslatedFrom = 'This message has been translated from';
+        ST.Translations.Mail_More = 'More';
+        ST.Translations.Mail_MoreActions = 'More Actions';
+        ST.Translations.Mail_Move = 'Move';
+        ST.Translations.Mail_MoveToFolder = 'Move to Folder';
+        ST.Translations.Mail_MustSelectGrade = 'You must select at least one grade to address to.';
+        ST.Translations.Mail_MustSelectRecipient = 'You must select at least one recipient to address to.';
+        ST.Translations.Mail_MyCounselor = 'My Counselor';
+        ST.Translations.Mail_MyGroups = 'My Groups';
+        ST.Translations.Mail_MyTeachers = 'My Teachers';
+        ST.Translations.Mail_Name = 'Name';
+        ST.Translations.Mail_NewContactGroup = 'New Contact List';
+        ST.Translations.Mail_NewFolder = 'New Folder';
+        ST.Translations.Mail_NewMessage = 'New Message';
+        ST.Translations.Mail_NewMessages = 'New Messages';
+        ST.Translations.Mail_NextMessage = 'Next Message';
+        ST.Translations.Mail_No = 'No';
+        ST.Translations.Mail_NoMessages = 'No Messages';
+        ST.Translations.Mail_NoRecipientsText = 'You must add at least one recipient.';
+        ST.Translations.Mail_NoRecipientsTitle = 'No recipients selected';
+        ST.Translations.Mail_NoRepliesAllowed = 'This message does not allow replies.';
+        ST.Translations.Mail_NoReply = 'No Reply';
+        ST.Translations.Mail_Ok = 'OK';
+        ST.Translations.Mail_Outbox = 'Outbox';
+        ST.Translations.Mail_OriginalMessage = 'Original Message';
+        ST.Translations.Mail_Parent = 'Parent';
+        ST.Translations.Mail_ParentOf = 'Parent of';
+        ST.Translations.Mail_Parents = 'Parents';
+        ST.Translations.Mail_Period = 'Period';
+        ST.Translations.Mail_PreviousMessage = 'Previous Messages';
+        ST.Translations.Mail_Public = 'Public';
+        ST.Translations.Mail_Read = 'Read';
+        ST.Translations.Mail_ReadCountExplanation = 'The count represents the total unique individuals message was sent to.';
+        ST.Translations.Mail_ReadStatus = 'Read Status';
+        ST.Translations.Mail_RemoveAllRecipients = 'Remove all recipients';
+        ST.Translations.Mail_RemoveAllRecipientsText = 'Are you sure you want to remove all recipients?';
+        ST.Translations.Mail_RemoveAllRecipientsTitle = 'Remove all recipients';
+        ST.Translations.Mail_RemoveRecipient = 'Remove recipient';
+        ST.Translations.Mail_RepliesForwards = 'Replies/Forwards';
+        ST.Translations.Mail_Reply = 'Reply';
+        ST.Translations.Mail_ReplyAll = 'Reply All';
+        ST.Translations.Mail_ResponseActions = 'Response Actions';
+        ST.Translations.Mail_Room = 'Room';
+        ST.Translations.Mail_Save = 'Save';
+        ST.Translations.Mail_SaveAsDraft = 'Save As Draft';
+        ST.Translations.Mail_School = 'School';
+        ST.Translations.Mail_SectionID = 'Section ID';
+        ST.Translations.Mail_SelectFromList = 'Select from list below';
+        ST.Translations.Mail_Search = 'Search';
+        ST.Translations.Mail_Send = 'Send';
+        ST.Translations.Mail_Sent = 'Sent';
+        ST.Translations.Mail_Settings = 'Settings';
+        ST.Translations.Mail_ShowDeletedMessages = 'Show deleted messages';
+        ST.Translations.Mail_ShowDetails = 'Show Details';
+        ST.Translations.Mail_ShowOriginalText = 'Show Original Message';
+        ST.Translations.Mail_Staff = 'Staff';
+        ST.Translations.Mail_Status = 'Status';
+        ST.Translations.Mail_Student = 'Student';
+        ST.Translations.Mail_StudentGroups = 'Student Groups';
+        ST.Translations.Mail_Students = 'Students';
+        ST.Translations.Mail_Subject = 'Subject';
+        ST.Translations.Mail_SystemMessages = 'Alerts';
+        ST.Translations.Mail_Term = 'Term';
+        ST.Translations.Mail_Teacher = 'Teacher';
+        ST.Translations.Mail_Teachers = 'Teachers';
+        ST.Translations.Mail_To = 'To';
+        ST.Translations.Mail_Today = 'Today';
+        ST.Translations.Mail_Trash = 'Trash';
+        ST.Translations.Mail_Type = 'Type';
+        ST.Translations.Mail_UnableToAddAttachment = 'Unable to add attachments for the following reasons';
+        ST.Translations.Mail_UnableToCompose = 'Unable to Compose';
+        ST.Translations.Mail_UnableToComposeWhileComposing = 'You must close or send your current email before composing another.';
+        ST.Translations.Mail_UnableToComposeWhileImpersonated = 'You are not allowed to compose an email while impersonated.';
+        ST.Translations.Mail_UnableToDeleteMessageText = 'You cannot delete a folder with messages in it.';
+        ST.Translations.Mail_UnableToDeleteFolderTitle = 'Unable to delete folder';
+        ST.Translations.Mail_Unassigned = 'Unassigned';
+        ST.Translations.Mail_Undelete = 'Undelete';
+        ST.Translations.Mail_Unread = 'Unread';
+        ST.Translations.Mail_UnreadMessages = 'Unread messages';
+        ST.Translations.Mail_UpdateContactLog = 'Add to Contact Log';
+        ST.Translations.Mail_Uploading = 'Uploading';
+        ST.Translations.Mail_UserGroup = 'User Group';
+        ST.Translations.Mail_UserGroups = 'User Groups';
+        ST.Translations.Mail_Users = 'Users';
+        ST.Translations.Mail_ViewMessage = 'View Message';
+        ST.Translations.Mail_WaitingToLoadTranslation = 'Waiting To Load Translation';
+        ST.Translations.Mail_Yes = 'Yes';
+        ST.Translations.Mail_Yesterday = 'Yesterday';
+
+    </script>
+
+
+
+    <script type="text/javascript">
+        window.CKEDITOR_BASEPATH = 'Editor/';
+    </script>
+
+
+
+
+    <script id="ctl00_ctl00_Loader" type="text/javascript">window.LoadRemoteScript = function (resourceClientID, url) {
+        var resourceSelector = '[id*=' + resourceClientID + ']';
+        if ($(resourceSelector).length == 0) {
+            var Script = document.createElement('script');
+            Script.src = url;
+            Script.async = false;
+            Script.id = resourceClientID;
+            document.head.appendChild(Script);
+        };
+    };
+    window.LoadLocalStyleSheet = function (resourceClientID, text) {
+        var resourceSelector = '[id*=' + resourceClientID + ']';
+        if ($(resourceSelector).length == 0) {
+            var Script = document.createElement('script');
+            Script.type='text/css';
+            Script.id = resourceClientID;
+            Script.innerHTML = text;
+            document.head.appendChild(Script);
+        };
+    };
+    window.LoadRemoteStyleSheet = function (resourceClientID, url) {
+        var resourceSelector = '[id*=' + resourceClientID + ']';
+        if ($(resourceSelector).length == 0) {
+            if (document.createStyleSheet) {
+                document.createStyleSheet(url);
+            } else {
+                $('<link>')
+                    .appendTo('head')
+                    .attr({type : 'text/css', rel : 'stylesheet'})
+                    .attr({id : resourceClientID})
+                    .attr('href', url);
+            }
+        };
+    };
+    </script><link id="ctl00_ctl00_Schemes_font-awesome_min_css" href="/Schemes/font-awesome.min.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_Global_css" href="/Schemes/PXP2/PXP2_Global.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP_Form_css" href="/Schemes/PXP_Form.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_ctl00_js_ST_es6-promise_auto_min_js" src="/js/ST/es6-promise.auto.min.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_json2_min_js" src="/js/PXP/json2.min.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_GBResources_jquery_3_1_1_min_js" src="/resources/GBResources/jquery_3_1_1_min.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><link id="ctl00_ctl00_GBResources_jquery_ui_min_css" href="/resources/GBResources/jquery_ui_min.css?2020-06-25T10%3a07%3a40.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_ctl00_GBResources_jquery_ui_min_js" src="/resources/GBResources/jquery_ui_min.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><link id="ctl00_ctl00_GBResources_pnotify_min_css" href="/resources/GBResources/pnotify_min.css?2020-06-25T10%3a07%3a40.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_ctl00_GBResources_pnotify_min_js" src="/resources/GBResources/pnotify_min.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><script id="ctl00_ctl00_GBResources_knockout_latest_js" src="/resources/GBResources/knockout_latest.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP_jquery_ui_touch-punch_min_js" src="/js/PXP/PXP_jquery.ui.touch-punch.min.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXPUtility_js" src="/js/PXP/PXPUtility.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><link id="ctl00_ctl00_GBResources_bootstrap_3_min_css" href="/resources/GBResources/bootstrap_3_min.css?2020-06-25T10%3a07%3a40.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_ctl00_GBResources_bootstrap_3_min_js" src="/resources/GBResources/bootstrap_3_min.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><link id="ctl00_ctl00_Schemes_PXP_Home_css" href="/Schemes/PXP_Home.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_Home_css" href="/Schemes/PXP2/PXP2_Home.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP_Color_css" href="/Schemes/PXP_Color.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_Widget_css" href="/Schemes/PXP2/PXP2_Widget.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_GB_IAPlugins_css" href="/Schemes/GB/IAPlugins.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_OENNotice_css" href="/Schemes/OENNotice.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_resources_GBResources_plugins_DevExpress_Content_dx_common_css" href="/resources/GBResources/plugins/DevExpress/Content/dx.common.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_resources_GBResources_plugins_DevExpress_Content_dx_light_compact_css" href="/resources/GBResources/plugins/DevExpress/Content/dx.light.compact.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_DXOverride_css" href="/Schemes/PXP2/PXP2_DXOverride.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_SM_css" href="/Schemes/PXP2/PXP2_SM.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_ctl00_js_ST_moment_min_js" src="/js/ST/moment.min.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_GBResources_knockout_mapping_latest_js" src="/resources/GBResources/knockout_mapping_latest.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXPPlugins_js" src="/js/PXP/PXPPlugins.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP_SMBundle_js" src="/js/PXP/PXP_SMBundle.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_resources_GBResources_plugins_DevExpress_Scripts_dx_all_js" src="/resources/GBResources/plugins/DevExpress/Scripts/dx.all.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_ST_ICanHaz-custom_min_js" src="/js/ST/ICanHaz-custom.min.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP_Home_js" src="/js/PXP/PXP_Home.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP2_Home_js" src="/js/PXP/PXP2_Home.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP2_Widget_js" src="/js/PXP/PXP2_Widget.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_Editor_ckeditor_js" src="/Editor/ckeditor.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><link id="ctl00_ctl00_Schemes_PXP2_PXP2_Attendance_css" href="/Schemes/PXP2/PXP2_Attendance.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_Calendar_css" href="/Schemes/PXP2/PXP2_Calendar.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_ReportAbsence_css" href="/Schemes/PXP2/PXP2_ReportAbsence.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_StudentSummary_css" href="/Schemes/PXP2/PXP2_StudentSummary.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_ctl00_Schemes_PXP2_PXP2_Messages_css" href="/Schemes/PXP2/PXP2_Messages.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_ctl00_js_PXP_PXP2_Calendar_js" src="/js/PXP/PXP2_Calendar.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP2_Attendance_js" src="/js/PXP/PXP2_Attendance.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP2_ReportAbsence_js" src="/js/PXP/PXP2_ReportAbsence.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP2_StudentSummary_js" src="/js/PXP/PXP2_StudentSummary.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_js_PXP_PXP2_Messages_js" src="/js/PXP/PXP2_Messages.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_JS_PXP_PXP2_Gradebook_js" src="/JS/PXP/PXP2_Gradebook.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><script id="ctl00_ctl00_JS_PXP_PXP2_DropBox_js" src="/JS/PXP/PXP2_DropBox.js?2020-07-25T08%3a04%3a29.0000000" type="text/javascript"></script><link id="ctl00_ctl00_Schemes_PXP2_PXP2_LanguageBar_css" href="/Schemes/PXP2/PXP2_LanguageBar.css?2020-07-25T08%3a04%3a29.0000000" type="text/css" rel="stylesheet"></link></head>
+<body id="ctl00_ctl00_MainBody" class="browser-Firefox bver-79_0">
+
+
+<div aria-label="Accessiblity Options" class="sr-only">
+    <a href="accessibility.html" target="_blank">Synergy Accessibility Tips</a>
+    <a href="#" role="button" id="AccessButton" data-action="ToggleAccessibleMode">Accessibility Mode</a>
+</div>
+
+<header id="ctl00_ctl00_MobileHeader" class="mobile-header"></header>
+
+
+<div class="PXPHeaderLogo">
+    <img src="Photos/8D/8D749524-419B-4CB2-BEAE-134B947A853D_PXPHeaderLogo.PNG?637312641600000000" alt="District Logo" width="240" height="70" />
+</div>
+
+
+<div class="container">
+    <div id="ctl00_ctl00_USER_ERROR"></div>
+
+
+
+    <header id="ctl00_ctl00_MainContent_PXPHeader" class="pxp-main-header">
+
+        <div id="ctl00_ctl00_MainContent_StudentSelector" class="pxp-student-header hide-for-print" aria-label="Student Selector" role="region">
+            <div class="current" data-toggle="dropdown">
+
+
+                <div class="student-info" data-agu="0" >
+                    <div class="student-photo">
+                        <img alt="Student Photo" src="Photos/B2/B2BB15E4-9C06-497D-9899-A996F91A6BEE_Photo.PNG" width="40" height="50" />
+                        <span class="student-id">ID: 20111337</span>
+                    </div>
+                    <div class="student-details">
+                        <h2 style="white-space: nowrap">
+                            <span class="student-name">Aila</span>
+                        </h2>
+
+                        <div class="school">Parks (Rosa) ES</div>
+                        <div class="phone">(415-749-3519)</div>
+                    </div>
+                </div>
+
+
+                <span class="split-btn" role="button">
+                <i class="caret" role="presentation"></i>
+                <span class="sr-only">Select a Student</span>
+            </span>
+
+            </div>
+
+            <ul class="dropdown-menu">
+
+                <li>
+
+
+                    <div class="student-info" data-agu="1" data-action="LoadStudent">
+                        <div class="student-photo">
+                            <img alt="Student Photo" src="Photos/CB/CB8C6E58-FADF-4E40-BAAD-249587F2BB5A_Photo.PNG" width="40" height="50" />
+                            <span class="student-id">ID: 20071337</span>
+                        </div>
+                        <div class="student-details">
+                            <h2 style="white-space: nowrap">
+                                <span class="student-name">Tesla</span>
+                            </h2>
+
+                            <div class="school">Asawa (Ruth) SOTA HS</div>
+                            <div class="phone">(415-695-5700)</div>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div></div>
+        <div class="pxp-navbar-container hide-for-print" aria-label="System Links" role="region">
+            <ul class="pxp-navbar">
+
+
+                <li><a href="PXP2_MyAccount.aspx?AGU=0">My Account</a></li>
+                <li><a href="PXP2_Help.aspx?AGU=0">Help</a></li>
+                <li id="ctl00_ctl00_MainContent_tabOnlineReg"><a href="PXP2_OEN_Home.aspx">Online Application</a></li>
+                <li><a href="PXP2_Login_Parent.aspx?Logout=1">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="pull-right hide-for-print greeting-container" style="position:relative" aria-label="District announcements" role="region">
+        <span id="DistrictName">
+
+            San Francisco
+        </span>
+            <span id="Greeting">Good morning, Dav Yaginuma, 8/8/2020</span>
+        </div>
+    </header>
+
+
+
+    <div class="tab-content">
+        <div class="pxp-container home-selected">
+            <div id="mainnav" class="hide-for-print" role="navigation" aria-label="Menu">
+
+                <div class="list-group pxp-left-nav" role="list"></div>
+
+            </div>
+            <div id="maincontent">
+                <form name="aspnetForm" method="post" action="./Home_PXP2.aspx" id="aspnetForm">
+                    <div>
+                        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="E700aWxkL2+FZCDVArA3Sd4Op/e7D0wDYfk7oLz0B+vxwK1tc5pZzpB5eta+zWl6w/1gVzht3IZZ38A7TqMU9rS8yFsl/Rfl74bZ0JI960c=" />
+                    </div>
+
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        window.LoadRemoteStyleSheet('Schemes_font-awesome_min_css', '/Schemes/font-awesome.min.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_Global_css', '/Schemes/PXP2/PXP2_Global.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP_Form_css', '/Schemes/PXP_Form.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_ST_es6-promise_auto_min_js', '/js/ST/es6-promise.auto.min.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_json2_min_js', '/js/PXP/json2.min.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('GBResources_jquery_3_1_1_min_js', '/resources/GBResources/jquery_3_1_1_min.js?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteStyleSheet('GBResources_jquery_ui_min_css', '/resources/GBResources/jquery_ui_min.css?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteScript('GBResources_jquery_ui_min_js', '/resources/GBResources/jquery_ui_min.js?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteStyleSheet('GBResources_pnotify_min_css', '/resources/GBResources/pnotify_min.css?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteScript('GBResources_pnotify_min_js', '/resources/GBResources/pnotify_min.js?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteScript('GBResources_knockout_latest_js', '/resources/GBResources/knockout_latest.js?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP_jquery_ui_touch-punch_min_js', '/js/PXP/PXP_jquery.ui.touch-punch.min.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXPUtility_js', '/js/PXP/PXPUtility.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('GBResources_bootstrap_3_min_css', '/resources/GBResources/bootstrap_3_min.css?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteScript('GBResources_bootstrap_3_min_js', '/resources/GBResources/bootstrap_3_min.js?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP_Home_css', '/Schemes/PXP_Home.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_Home_css', '/Schemes/PXP2/PXP2_Home.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP_Color_css', '/Schemes/PXP_Color.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_Widget_css', '/Schemes/PXP2/PXP2_Widget.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_GB_IAPlugins_css', '/Schemes/GB/IAPlugins.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_OENNotice_css', '/Schemes/OENNotice.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('resources_GBResources_plugins_DevExpress_Content_dx_common_css', '/resources/GBResources/plugins/DevExpress/Content/dx.common.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('resources_GBResources_plugins_DevExpress_Content_dx_light_compact_css', '/resources/GBResources/plugins/DevExpress/Content/dx.light.compact.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_DXOverride_css', '/Schemes/PXP2/PXP2_DXOverride.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_SM_css', '/Schemes/PXP2/PXP2_SM.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_ST_moment_min_js', '/js/ST/moment.min.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('GBResources_knockout_mapping_latest_js', '/resources/GBResources/knockout_mapping_latest.js?2020-06-25T10%3a07%3a40.0000000');
+                        window.LoadRemoteScript('js_PXP_PXPPlugins_js', '/js/PXP/PXPPlugins.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP_SMBundle_js', '/js/PXP/PXP_SMBundle.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('resources_GBResources_plugins_DevExpress_Scripts_dx_all_js', '/resources/GBResources/plugins/DevExpress/Scripts/dx.all.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_ST_ICanHaz-custom_min_js', '/js/ST/ICanHaz-custom.min.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP_Home_js', '/js/PXP/PXP_Home.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP2_Home_js', '/js/PXP/PXP2_Home.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP2_Widget_js', '/js/PXP/PXP2_Widget.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('Editor_ckeditor_js', '/Editor/ckeditor.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_Attendance_css', '/Schemes/PXP2/PXP2_Attendance.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_Calendar_css', '/Schemes/PXP2/PXP2_Calendar.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_ReportAbsence_css', '/Schemes/PXP2/PXP2_ReportAbsence.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_StudentSummary_css', '/Schemes/PXP2/PXP2_StudentSummary.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_Messages_css', '/Schemes/PXP2/PXP2_Messages.css?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP2_Calendar_js', '/js/PXP/PXP2_Calendar.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP2_Attendance_js', '/js/PXP/PXP2_Attendance.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP2_ReportAbsence_js', '/js/PXP/PXP2_ReportAbsence.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP2_StudentSummary_js', '/js/PXP/PXP2_StudentSummary.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('js_PXP_PXP2_Messages_js', '/js/PXP/PXP2_Messages.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('JS_PXP_PXP2_Gradebook_js', '/JS/PXP/PXP2_Gradebook.js?2020-07-25T08%3a04%3a29.0000000');
+                        window.LoadRemoteScript('JS_PXP_PXP2_DropBox_js', '/JS/PXP/PXP2_DropBox.js?2020-07-25T08%3a04%3a29.0000000');
+                        var CURRENT_WEB_PORTAL='ParentVUE';window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_LanguageBar_css', '/Schemes/PXP2/PXP2_LanguageBar.css?2020-07-25T08%3a04%3a29.0000000');
+                        //]]>
+                    </script>
+
+                    <div>
+
+                        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="256D6A7C" />
+                    </div>
+
+                    <div id="MainDiv" style="position: relative;">
+
+                        <div class="student-summary">
+                        </div>
+
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script id="PXP.Switch" type="text/html">
+        <span class="switch">
+        <span class="on">{{onText}}</span>
+        <span class="toggle"></span>
+        <span class="off">{{offText}}</span>
+    </span>
+    </script>
+
+    <script type="text/html" id="PXP.SummaryChart.popover">
+        <table><tbody>
+        {{#items}}
+        <tr>
+            <th>{{name}}:</th><td>{{value}}</td>
+        </tr>
+        {{/items}}
+        </tbody></table>
+    </script>
+
+    <script type="text/html" id="PXP.SummaryChart">
+        <div class="pxp-summary-chart">
+            {{#items}}
+            <div class="row" data-action="{{detailAction}}" data-guid="{{guid}}" data-heading="{{heading}}">
+                <div class="title col-md-6 col-xs-6">{{title}}</div>
+                <div class="bar-container col-md-6 col-xs-6" data-toggle="popover" data-content="{{popoverContent}}" data-title="{{title}}">
+                    <div class="bar">
+                        {{#segments}}
+                        <div class="segment" style="background-color:{{color}}; width:{{width}}%"></div>
+                        {{/segments}}
+                    </div>
+                </div>
+            </div>
+            {{/items}}
+        </div>
+    </script>
+
+    <script type="text/html" id="PXP.SummaryDetailsHeading">
+        <h1 style="margin-bottom: 0">
+            <span class="subtitle">{{title}}</span>
+            <a href="#" data-action="CloseSummaryDetails">{{{heading}}}</a>
+        </h1>
+        <div class="btn btn-link dismiss-btn" data-action="CloseSummaryDetails">
+            <span><i class="glyphicon glyphicon-chevron-down"></i></span>
+            <span>Dismiss</span>
+            <span><i class="glyphicon glyphicon-chevron-down"></i></span>
+        </div>
+        <div class="loader"><span>
+        <img src="Images/PXP/OEN_ajax-loader_gray.gif" alt="loading" />
+        Please Wait...
+    </span></div>
+    </script>
+
+    <script type="text/html" id="PXP.SchoolTermDetailGrids">
+        <div class="pxp-ring-chart">
+            {{#extraFields.length}}
+            <ul>
+                {{#extraFields}}
+                <li><span>{{name}}:</span><span>{{value}}</span></li>
+                {{/extraFields}}
+            </ul>
+            {{/extraFields.length}}
+        </div>
+        <div class="summary-details-table">
+            {{#Legend}}{{/Legend}}
+
+            {{#Schools}}
+            <h2>{{SchoolName}} {{Year}}</h2>
+            <table class="table table-striped">
+                <caption class="sr-only">Attendance Details: {{SchoolName}} {{Year}}</caption>
+                <thead>
+                <tr>
+                    {{#Headings}}
+                    <th {{#colspan}}colspan="{{colspan}}"{{/colspan}}>{{columnTitle}}</th>
+                    {{/Headings}}
+                </tr>
+                </thead>
+                {{#Terms}}
+                <thead>
+                <tr><th colspan="100%">{{TermName}}</th></tr>
+                </thead>
+                <tbody>
+                {{#Rows}}
+                <tr>
+                    {{#Cells}}
+                    <td>{{{.}}}</td>
+                    {{/Cells}}
+                </tr>
+                {{/Rows}}
+                </tbody>
+                {{/Terms}}
+            </table>
+            {{/Schools}}
+        </div>
+    </script>
+
+    <script type="text/html" id="PXP.SummaryDetails">
+        <div class="pxp-ring-chart">
+            {{#extraFields.length}}
+            <ul>
+                {{#extraFields}}
+                <li><span>{{name}}:</span><span>{{value}}</span></li>
+                {{/extraFields}}
+            </ul>
+            {{/extraFields.length}}
+        </div>
+        <div class="summary-details-table">
+            {{#Legend}}{{/Legend}}
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    {{#headings}}
+                    <th {{#colspan}}colspan="{{colspan}}"{{/colspan}}>{{columnTitle}}</th>
+                    {{/headings}}
+                </tr>
+                </thead>
+                <tbody>
+                {{#rows}}
+                <tr>
+                    {{#cells}}
+                    <td>{{{.}}}</td>
+                    {{/cells}}
+                </tr>
+                {{/rows}}
+                </tbody>
+            </table>
+        </div>
+    </script>
+
+
+    <script id="PXP.Announcements" type="text/html">
+        <div class="title">
+            District Announcements
+        </div>
+
+        <div class="st-modal-content">
+
+            <span style="font-style:italic">
+                None
+            </span>
+
+        </div>
+    </script>
+
+    <script id="PXP.StackItem.Heading" type="text/html">
+        <span>
+        {{{heading_text}}}
+    </span>
+    </script>
+
+    <script id="PXP.StackItem" type="text/html">
+        <div class="content-stack-item">
+            {{#title}}
+            <h2>{{title}}</h2>
+            {{/title}}
+            <div class="loader"><span>
+            <img width="100px" src="Images/PXP/OEN_ajax-loader_gray.gif" alt="loading" />
+            Please Wait...
+        </span></div>
+        </div>
+    </script>
+
+    <iframe id="keepAliveFrame" class="collapse"></iframe>
+
+
+
+
+</div>
+
+<footer id="ctl00_ctl00_PXPFooter" class="footer hide-for-print" aria-label="Footer">
+    <div class="action-bar">
+        <div role="region" aria-label="System links" id="SystemLinks">
+            <ul class="system-links">
+
+                <li><a href="PXP2_Login_Parent.aspx?Logout=1" id="ctl00_ctl00_lnkLogin">Logout</a></li>
+
+                <li><a href="PXP2_Contact.aspx" id="ctl00_ctl00_lnkContact">Contact</a></li>
+                <li><a href="PXP2_Privacy.aspx" id="ctl00_ctl00_lnkPrivacy">Privacy</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div id="ctl00_ctl00_ctl10_LanguagesDropDown" class="languagesDropDown" role="region" aria-label="Languages">
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>English</span>
+                    <span class="fa fa-caret-down" role="presentation"></span>
+                </button>
+                <div class="dropdown-menu" style="max-height:400px;overflow:auto;">
+                    <ul class="languageList list-group">
+
+                        <li data-selected="True">
+                            <a class="dropdown-item" title="English" href="/Home_PXP2.aspx?LNG=00">English</a>
+                        </li>
+
+                        <li data-selected="False">
+                            <a class="dropdown-item" title="Spanish" href="/Home_PXP2.aspx?LNG=01">Español</a>
+                        </li>
+
+                        <li data-selected="False">
+                            <a class="dropdown-item" title="Vietnamese" href="/Home_PXP2.aspx?LNG=02">Tiếng Việt</a>
+                        </li>
+
+                        <li data-selected="False">
+                            <a class="dropdown-item" title="Cantonese" href="/Home_PXP2.aspx?LNG=03">中文</a>
+                        </li>
+
+                        <li data-selected="False">
+                            <a class="dropdown-item" title="Filipino (Pilipino or Tagalog)" href="/Home_PXP2.aspx?LNG=05">Filipino</a>
+                        </li>
+
+                        <li data-selected="False">
+                            <a class="dropdown-item" title="Arabic" href="/Home_PXP2.aspx?LNG=11">العربية</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="legal" class="center">
+        <a target="_blank" href="http://www.edupoint.com/">
+            <img border="0" style="padding-bottom: 3px; border: 0px" alt="Edupoint Educational Systems" src="Images/ST_Revelation/EduPointLogo_WHITE.png"></a>
+        <br />
+        &copy;Copyright 2020 Edupoint, LLC
+    </div>
+
+    <div id="accessToggle">
+        <i class="glyphicon glyphicon-ok checked"></i>
+        <a href="#" role="button" data-action="ToggleAccessibleMode">Accessibility Mode</a>
+    </div>
+</footer>
+
+
+</body>
+</html>

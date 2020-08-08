@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, user-scalable=yes" /><title>
+	ParentVUE 
+</title><meta content="en-US" name="language" /><meta content="private - general audiences" name="rating" /><meta content="2005 - Edupoint,Inc" name="copyright" /><meta content="Edupoint, LLC" name="author" /><link rel="Shortcut Icon" href="synergy.ico" />
+
+    <script type="text/javascript">
+        var OEN = { Configurations: {} };
+        window.PXP = window.PXP || { Translations: {} };
+        window.ST = window.ST || {};
+        window.ST.Translations = window.ST.Translations || {};
+        ST.NFAList = ST.NFAGlobalList = '<REV_RETURN/>';
+
+        PXP.UseGoogleAPI = true;
+	PXP.Translations.ReportTryAgain = 'The document is being built.  Please try again in a few moments.';
+	PXP.AccessibilityMode = false;
+	PXP.UsePXP2Interface = true;
+	
+    </script>
+
+    
+<script id="ctl00_Loader" type="text/javascript">window.LoadRemoteScript = function (resourceClientID, url) {
+var resourceSelector = '[id*=' + resourceClientID + ']';
+if ($(resourceSelector).length == 0) {
+var Script = document.createElement('script');
+Script.src = url;
+Script.async = false;
+Script.id = resourceClientID;
+document.head.appendChild(Script);
+};
+};
+window.LoadLocalStyleSheet = function (resourceClientID, text) {
+var resourceSelector = '[id*=' + resourceClientID + ']';
+if ($(resourceSelector).length == 0) {
+var Script = document.createElement('script');
+Script.type='text/css';
+Script.id = resourceClientID;
+Script.innerHTML = text;
+document.head.appendChild(Script);
+};
+};
+window.LoadRemoteStyleSheet = function (resourceClientID, url) {
+var resourceSelector = '[id*=' + resourceClientID + ']';
+if ($(resourceSelector).length == 0) {
+if (document.createStyleSheet) {
+document.createStyleSheet(url);
+} else {
+$('<link>')
+.appendTo('head')
+.attr({type : 'text/css', rel : 'stylesheet'})
+.attr({id : resourceClientID})
+.attr('href', url);
+}
+};
+};
+</script><link id="ctl00_Schemes_font-awesome_min_css" href="/Schemes/font-awesome.min.css?2020-03-16T20%3a21%3a00.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_Schemes_PXP2_PXP2_Global_css" href="/Schemes/PXP2/PXP2_Global.css?2020-03-16T20%3a21%3a00.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_Schemes_PXP_Form_css" href="/Schemes/PXP_Form.css?2020-03-16T20%3a21%3a00.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_js_ST_es6-promise_auto_min_js" src="/js/ST/es6-promise.auto.min.js?2020-03-16T20%3a21%3a00.0000000" type="text/javascript"></script><script id="ctl00_js_PXP_json2_min_js" src="/js/PXP/json2.min.js?2020-03-16T20%3a21%3a00.0000000" type="text/javascript"></script><script id="ctl00_GBResources_jquery_3_1_1_min_js" src="/resources/GBResources/jquery_3_1_1_min.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><link id="ctl00_GBResources_jquery_ui_min_css" href="/resources/GBResources/jquery_ui_min.css?2020-06-25T10%3a07%3a40.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_GBResources_jquery_ui_min_js" src="/resources/GBResources/jquery_ui_min.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><link id="ctl00_GBResources_pnotify_min_css" href="/resources/GBResources/pnotify_min.css?2020-06-25T10%3a07%3a40.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_GBResources_pnotify_min_js" src="/resources/GBResources/pnotify_min.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><script id="ctl00_GBResources_knockout_latest_js" src="/resources/GBResources/knockout_latest.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><script id="ctl00_js_PXP_PXP_jquery_ui_touch-punch_min_js" src="/js/PXP/PXP_jquery.ui.touch-punch.min.js?2020-03-16T20%3a21%3a00.0000000" type="text/javascript"></script><script id="ctl00_js_PXP_PXPUtility_js" src="/js/PXP/PXPUtility.js?2020-03-16T20%3a21%3a00.0000000" type="text/javascript"></script><link id="ctl00_GBResources_bootstrap_3_min_css" href="/resources/GBResources/bootstrap_3_min.css?2020-06-25T10%3a07%3a40.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_GBResources_bootstrap_3_min_js" src="/resources/GBResources/bootstrap_3_min.js?2020-06-25T10%3a07%3a40.0000000" type="text/javascript"></script><link id="ctl00_Schemes_PXP2_PXP2_login_css" href="/Schemes/PXP2/PXP2_login.css?2020-03-16T20%3a21%3a00.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_js_PXP_PXP2_Login_js" src="/js/PXP/PXP2_Login.js?2020-03-16T20%3a21%3a00.0000000" type="text/javascript"></script><link id="ctl00_Schemes_PXP2_PXP2_LanguageBar_css" href="/Schemes/PXP2/PXP2_LanguageBar.css?2020-03-16T20%3a21%3a00.0000000" type="text/css" rel="stylesheet"></link></head>
+<body id="ctl00_MainBody" class="browser-Unknown bver-0_0">
+    
+
+    <div aria-label="Accessiblity Options" class="sr-only">
+        <a href="accessibility.html" target="_blank">Synergy Accessibility Tips</a>
+        <a href="#" role="button" id="AccessButton" data-action="ToggleAccessibleMode">Accessibility Mode</a>
+    </div>
+
+    <header id="ctl00_MobileHeader" class="mobile-header"></header>
+
+    
+        <div class="PXPHeaderLogo">
+            <img src="Photos/8D/8D749524-419B-4CB2-BEAE-134B947A853D_PXPHeaderLogo.PNG?637312641600000000" alt="District Logo" width="240" height="70" />
+        </div>
+    
+
+    <div class="container">
+        <div id="ctl00_USER_ERROR"></div>
+
+        
+    <h1 id="LoginPVUE"><h2 style="text-align: center;"><span style="color: #00355f;">ParentVUE</span></h2>
+<p style="text-align: center;"><span style="color: #000000;">Login or activate by clicking "Activate" &gt; Activate Account. <br />Visit <a href="https://sfusd.edu/parentvue">sfusd.edu/parentvue</a> for more resources.</span></p></h1>
+
+    <div class="equal">
+        <div class="login-content" style="margin: auto">
+            
+
+            <div class="panel panel-default" style="width:100%">
+                <h2 class="panel-heading" id="LoginMessage">Login</h2>
+                <div class="panel-body">
+                    <span id="DistrictName">San Francisco</span>
+
+                    <form name="aspnetForm" method="post" action="./PXP2_Login_Parent.aspx?regenerateSessionId=True" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="B64_ENCODED-THINGAMABOB" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+window.LoadRemoteStyleSheet('Schemes_font-awesome_min_css', '/Schemes/font-awesome.min.css?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_Global_css', '/Schemes/PXP2/PXP2_Global.css?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteStyleSheet('Schemes_PXP_Form_css', '/Schemes/PXP_Form.css?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteScript('js_ST_es6-promise_auto_min_js', '/js/ST/es6-promise.auto.min.js?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteScript('js_PXP_json2_min_js', '/js/PXP/json2.min.js?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteScript('GBResources_jquery_3_1_1_min_js', '/resources/GBResources/jquery_3_1_1_min.js?2020-06-25T10%3a07%3a40.0000000');
+window.LoadRemoteStyleSheet('GBResources_jquery_ui_min_css', '/resources/GBResources/jquery_ui_min.css?2020-06-25T10%3a07%3a40.0000000');
+window.LoadRemoteScript('GBResources_jquery_ui_min_js', '/resources/GBResources/jquery_ui_min.js?2020-06-25T10%3a07%3a40.0000000');
+window.LoadRemoteStyleSheet('GBResources_pnotify_min_css', '/resources/GBResources/pnotify_min.css?2020-06-25T10%3a07%3a40.0000000');
+window.LoadRemoteScript('GBResources_pnotify_min_js', '/resources/GBResources/pnotify_min.js?2020-06-25T10%3a07%3a40.0000000');
+window.LoadRemoteScript('GBResources_knockout_latest_js', '/resources/GBResources/knockout_latest.js?2020-06-25T10%3a07%3a40.0000000');
+window.LoadRemoteScript('js_PXP_PXP_jquery_ui_touch-punch_min_js', '/js/PXP/PXP_jquery.ui.touch-punch.min.js?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteScript('js_PXP_PXPUtility_js', '/js/PXP/PXPUtility.js?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteStyleSheet('GBResources_bootstrap_3_min_css', '/resources/GBResources/bootstrap_3_min.css?2020-06-25T10%3a07%3a40.0000000');
+window.LoadRemoteScript('GBResources_bootstrap_3_min_js', '/resources/GBResources/bootstrap_3_min.js?2020-06-25T10%3a07%3a40.0000000');
+window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_login_css', '/Schemes/PXP2/PXP2_login.css?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteScript('js_PXP_PXP2_Login_js', '/js/PXP/PXP2_Login.js?2020-03-16T20%3a21%3a00.0000000');
+window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_LanguageBar_css', '/Schemes/PXP2/PXP2_LanguageBar.css?2020-03-16T20%3a21%3a00.0000000');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D5A74BF2" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="BIG-SECRET-THING" />
+                        <div class="form-group">
+                            <label id="LoginUserName" for="ctl00_MainContent_username">User Name:</label>
+                            <input name="ctl00$MainContent$username" type="text" id="ctl00_MainContent_username" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label id="LoginPassword" for="ctl00_MainContent_password">Password:</label>
+				            <input name="ctl00$MainContent$password" type="password" id="ctl00_MainContent_password" class="form-control" />
+                            <div id="ctl00_MainContent_ResetPassWordLink2" class="pxp-forgot-password-link">
+                                <a href="PXP2_Password_Help.aspx">
+                                    <span><h4>Forgot Password</h4></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group center">
+				            <input name="ctl00$MainContent$Submit1" type="submit" id="ctl00_MainContent_Submit1" value="Login" class="btn btn-primary" onclick="this.disabled=true;this.form.submit();" />
+                        </div>
+		            </form>
+                </div>
+
+                <div class="login-more">
+                    <div class="expander">
+                        <span class="btn-more" data-action="ToggleMoreOptions">
+                            Activate
+                            <i class="glyphicon"></i>
+                        </span>
+                    </div>
+                    <div class="more-options">
+                        <ul>
+                            <li><a class="pxp-login-more-link" href="PXP2_Activate_Account_Privacy_Parent.aspx">
+                                <i class="fa fa-power-off" style="color: #ffcc00"></i>
+                                <span><h4> Activate Account </h4></span>
+                            </a></li>
+                            <li><a href="PXP2_Password_Help.aspx" id="ctl00_MainContent_ResetPassWordLink" class="pxp-login-more-link">
+                                <i class="fa fa-lock" style="color: #ff0000"></i>
+                                <span><h4>Forgot Password</h4></span>
+                            </a></li>
+
+                            
+                            <li class="separator" role="separator"></li>
+                            <li><a class="pxp-login-more-link" href="https://itunes.apple.com/us/app/parentvue/id412054615?mt=8">
+                                <i class="fa fa-apple" style="color:#0000ff"></i>
+                                <span>iPhone App</span>
+                            </a></li>
+                            <li><a class="pxp-login-more-link" href="https://market.android.com/details?id=com.FreeLance.ParentVUE">
+                                <i class="fa fa-android" style="color:#00ff00"></i> 
+                                <span>Android App</span>
+                            </a></li>
+                            <li><span class="pxp-login-more-link">
+                                <i class="fa fa-link" style="color:#000088"></i>
+                                <span>Mobile App URL</span>
+                                <span style="font-size:12px">https://portal.sfusd.edu/</span>
+                            </span></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel-footer" style="text-align:left; padding:5px">
+                    
+
+
+<div id="ctl00_MainContent_ctl02_LanguagesDropDown" class="languagesDropDown" role="region" aria-label="Languages">
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>English</span>
+            <span class="fa fa-caret-down" role="presentation"></span>
+        </button>
+        <div class="dropdown-menu" style="max-height:400px;overflow:auto;">
+            <ul class="languageList list-group">
+            
+            <li data-selected="True">
+                <a class="dropdown-item" title="English" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=00">English</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Spanish" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=01">Español</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Vietnamese" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=02">Tiếng Việt</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Cantonese" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=03">中文</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Filipino (Pilipino or Tagalog)" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=05">Filipino</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Arabic" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=11">العربية</a>
+            </li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row center">
+        <span id="ctl00_MainContent_ERROR"></span>
+    </div>
+
+    </div>
+
+    <footer id="ctl00_PXPFooter" class="footer hide-for-print" aria-label="Footer">
+        <div class="action-bar">
+            <div role="region" aria-label="System links" id="SystemLinks">
+                <ul class="system-links">
+                    
+                        <li><a href="PXP2_Login.aspx?Logout=1" id="ctl00_lnkLogin">Return to common login</a></li>
+                    
+                    <li><a href="PXP2_Contact.aspx" id="ctl00_lnkContact">Contact</a></li>
+                    <li><a href="PXP2_Privacy.aspx" id="ctl00_lnkPrivacy">Privacy</a></li>
+                </ul>
+            </div>
+
+            
+
+
+<div id="ctl00_ctl10_LanguagesDropDown" class="languagesDropDown" role="region" aria-label="Languages">
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>English</span>
+            <span class="fa fa-caret-down" role="presentation"></span>
+        </button>
+        <div class="dropdown-menu" style="max-height:400px;overflow:auto;">
+            <ul class="languageList list-group">
+            
+            <li data-selected="True">
+                <a class="dropdown-item" title="English" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=00">English</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Spanish" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=01">Español</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Vietnamese" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=02">Tiếng Việt</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Cantonese" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=03">中文</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Filipino (Pilipino or Tagalog)" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=05">Filipino</a>
+            </li>
+            
+            <li data-selected="False">
+                <a class="dropdown-item" title="Arabic" href="/PXP2_Login_Parent.aspx?regenerateSessionId=True&LNG=11">العربية</a>
+            </li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+        </div>
+
+        <div id="legal" class="center">
+            <a target="_blank" href="http://www.edupoint.com/">
+                <img border="0" style="padding-bottom: 3px; border: 0px" alt="Edupoint Educational Systems" src="Images/ST_Revelation/EduPointLogo_WHITE.png"></a>
+            <br />
+            &copy;Copyright 2020 Edupoint, LLC
+        </div>
+
+        <div id="accessToggle">
+            <i class="glyphicon glyphicon-ok checked"></i>
+            <a href="#" role="button" data-action="ToggleAccessibleMode">Accessibility Mode</a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
