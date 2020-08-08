@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require_relative 'lib/parentvue'
 require 'thor'
 require 'pp'
 
 class ParentVUEScript < Thor
-  class_option :login_url, :aliases => "-l", :desc => "Login Page URL", :required => true
-  class_option :username,  :aliases => "-U", :desc => "Username", :required => true
-  class_option :password,  :aliases => "-P", :desc => "Password", :required => true
+  class_option :login_url, aliases: '-l', desc: 'Login Page URL', required: true
+  class_option :username,  aliases: '-U', desc: 'Username', required: true
+  class_option :password,  aliases: '-P', desc: 'Password', required: true
   # TODO: language switch
 
   desc 'list', 'Print list of students associated with your account.'
