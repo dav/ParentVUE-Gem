@@ -5,13 +5,19 @@ San Francisco Unified School District (SFUSD), and interact with it.
 
 The long term goal is to create an Alexa app so we can check assignments, etc.
 
-I figured I might as well make it a gem too. Currently though it is
-just a library and an example script. Once some more basic functionality is
-supported I'll figure out the gem part.
+Currently though it is just a library and a simple executable script. 
 
-The script works like this:
+Example install and usage of executable:
 ```
-bundle exec ruby parentvue_script.rb list -U frankchu -P 12galaxies                             1226ms  Sat Aug  8 11:57:30 2020
+$ gem install parentvue
+Successfully installed parentvue-0.1.0
+Parsing documentation for parentvue-0.1.0
+Installing ri documentation for parentvue-0.1.0
+Done installing documentation for parentvue after 0 seconds
+1 gem installed
+
+$ parentvue list -U frankchu -P 12galaxies
+
 [{:name=>"Aila", :id=>"20111337", :school_name=>"Norton (Emperor) ES"},
  {:name=>"Tesla", :id=>"20071337", :school_name=>"Riley (Boots) HS"}]
 ```
@@ -27,6 +33,6 @@ If you want to add any functionality and make PRs, you'll want to
 TODO
 - make a proper Students model
 - once school year starts and there are actual assignments, extend to get this information
+- Make it so you're not entering the password on the command line for the executable
 - rename `master` branch (github default) to `main`
 - set up a CI account for it
-- Actually turn it into a gem
