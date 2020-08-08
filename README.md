@@ -18,7 +18,7 @@ bundle exec ruby parentvue_script.rb list -U frankchu -P 12galaxies             
 
 If you want to add any functionality and make PRs, you'll want to 
 - go to the real page in your browser
-- save the source to a file under `spec/fixtures/html`
+- save the source to a file under `spec/fixtures/html` (at some point be sure to change any personally identifiable information)
 - create a spec that stubs that page request and lays out data scraping expectations
 - update the service code to make the new spec pass (and all old specs, use `make test`)
 - make sure `make lint` passes as well
