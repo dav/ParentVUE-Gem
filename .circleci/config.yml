@@ -1,6 +1,42 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@0.1.2 
+  ruby: circleci/ruby@0.1.2
+
+commands:
+  configure_bundler:
+    description: "Installs and configures the right version of bundler"
+    steps:
+      - run:
+          name: Configure Bundler
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler
+  restore_cache_and_install_dependencies:
+    description: "Restore the cache if it exists, install new dependencies, and save the cache again"
+    steps:
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "Gemfile.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v2-dependencies-
+      - configure_bundler
+      - run:
+          name: install dependencies
+          command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v2-dependencies-{{ checksum "Gemfile.lock" }}
+  run_all_checks:
+    description: "Run lint and specs"
+    steps:
+      - run:
+          name: lint
+          command: make lint
+      - run:
+          name: specs
+          command: make test
 
 jobs:
   build:
@@ -9,14 +45,5 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - run:
-          name: Install bundler
-          command: gem install bundler
-      - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
-
-
-
-
+      - restore_cache_and_install_dependencies
+      - run_all_checks
