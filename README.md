@@ -1,9 +1,14 @@
 # ParentVUE-Gem
 
-Provides library to sign into ParentVUE, a web site provided to families of the
-San Francisco Unified School District (SFUSD), and interact with it.
+Provides library to interact with [ParentVUE](https://portal.sfusd.edu/), 
+a web site that the
+San Francisco Unified School District (SFUSD) uses to communicate with families.
 
-The long term goal is to create an Alexa app so we can check assignments, etc.
+This consists largely of providing a high level DSL to navigate the web site, and
+is implemented using the [Mechanize gem](https://github.com/sparklemotion/mechanize).
+
+The long term goal is to create an Alexa app so we can check assignments, attendance, 
+grades, etc.
 
 Currently though it is just a library and a simple executable script. 
 
@@ -11,10 +16,6 @@ Example install and usage of executable:
 ```
 $ gem install parentvue
 Successfully installed parentvue-0.1.0
-Parsing documentation for parentvue-0.1.0
-Installing ri documentation for parentvue-0.1.0
-Done installing documentation for parentvue after 0 seconds
-1 gem installed
 
 $ parentvue list -U frankchu -P 12galaxies
 
@@ -24,8 +25,8 @@ $ parentvue list -U frankchu -P 12galaxies
 
 If you want to add any functionality and make PRs, you'll want to 
 - go to the real page in your browser
-- save the source to a file under `spec/fixtures/html` (at some point be sure to change any personally identifiable information)
-- create a spec that stubs that page request and lays out data scraping expectations
+- save the source to a file under `spec/fixtures/html` (before committing be sure to change any personally identifiable information)
+- create a spec that stubs that page request and lays out data scraping expectations (examples exist)
 - update the service code to make the new spec pass (and all old specs, use `make test`)
 - make sure `make lint` passes as well
 - make a PR
@@ -35,4 +36,3 @@ TODO
 - once school year starts and there are actual assignments, extend to get this information
 - Make it so you're not entering the password on the command line for the executable
 - rename `master` branch (github default) to `main`
-- set up a CI account for it

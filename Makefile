@@ -19,4 +19,7 @@ install:
 
 reinstall: uninstall build install
 
+ci: lint test
+
+
 
